@@ -19,6 +19,17 @@ h5,
 h6 {
   font-family: "Inter", sans-serif !important;
 }
+*/
 h1 {
-  font-weight: 700 !important;
-} */
+  font-size: 4rem !important;
+  /* text-align: center; */
+  font-weight: 700;
+}
+
+.badge {
+  padding: 0.5rem;
+}
+
+.main {
+  /* background-color: red; */
+}

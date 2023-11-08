@@ -6,7 +6,6 @@ import {
   Flex,
   Text,
   Image,
-  Group,
   UnstyledButton,
   Title,
   Stack,
@@ -14,12 +13,18 @@ import {
   Badge,
 } from "@mantine/core";
 import HeroImage from "../src/assets/hero-img.webp";
-import { MantineLogo } from "@mantine/ds";
 import classes from "./styles/MobileNavbar.module.css";
 import HeaderMenu from "./HeaderMenu";
+import { BsFillArrowRightCircleFill } from "react-icons/bs";
 
-export default function App() {
+function App() {
   const [opened, { toggle }] = useDisclosure();
+  const rightIcon = (
+    <BsFillArrowRightCircleFill
+      style={{ marginLeft: "0.2rem" }}
+      fontSize={18}
+    />
+  );
 
   return (
     <AppShell
@@ -39,7 +44,7 @@ export default function App() {
         <UnstyledButton className={classes.control}>Support</UnstyledButton>
       </AppShell.Navbar>
 
-      <AppShell.Main>
+      <AppShell.Main className="main">
         <Center>
           <Center
             component={Stack}
@@ -48,13 +53,23 @@ export default function App() {
             align="center"
             w={"800px"}
           >
-            <Badge>Introducing our Figma Variables compatibility</Badge>
+            <Badge
+              component="p"
+              className="badge"
+              variant="white"
+              color="black"
+              rightSection={rightIcon}
+              size="xl"
+              fz={16}
+            >
+              Introducing our Figma Variables compatibility
+            </Badge>
             <Stack align="center" justify="center">
-              <Title order={1}>
+              <Title order={1} align="center">
                 Automate the distribution of your design tokens - your team will
                 love it.
               </Title>
-              <Text>
+              <Text fz={18} align="center">
                 Enhance your design system by creating your own source of truth,
                 improve collaboration between design and development and reduce
                 manual work.
@@ -72,3 +87,5 @@ export default function App() {
     </AppShell>
   );
 }
+
+export default App;
