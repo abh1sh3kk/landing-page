@@ -27,9 +27,24 @@ h1 {
 }
 
 .badge {
-  padding: 0.5rem;
+  border-radius: 2rem;
 }
 
 .main {
   /* background-color: red; */
+}
+
+.secondary-btn {
+  box-shadow: rgba(255, 255, 255, 0.2) 0px 1px 0px 0px inset,
+    rgba(0, 0, 0, 0.08) 0px 1px 2px 0px, rgba(0, 0, 0, 0.06) 0px 4px 8px 0px;
+  background: transparent;
+}
+
+.hero-text {
+  color: white;
+}
+
+.highlight-gradient {
+  color: linear-gradient(270deg, rgb(110, 86, 207) 0%, rgb(249, 209, 255) 100%);
+  /* background-clip: text; */
 }

@@ -53,21 +53,22 @@ function App() {
             align="center"
             w={"800px"}
           >
-            <Badge
+            <Button
               component="p"
               className="badge"
               variant="white"
               color="black"
               rightSection={rightIcon}
-              size="xl"
               fz={16}
             >
               Introducing our Figma Variables compatibility
-            </Badge>
+            </Button>
             <Stack align="center" justify="center">
-              <Title order={1} align="center">
-                Automate the distribution of your design tokens - your team will
-                love it.
+              <Title order={1} className="hero-text" align="center">
+                Automate the distribution of your design tokens -
+                <Title order={1} className="highlight-gradient">
+                  your team will love it.
+                </Title>
               </Title>
               <Text fz={18} align="center">
                 Enhance your design system by creating your own source of truth,
@@ -75,12 +76,24 @@ function App() {
                 manual work.
               </Text>
               <Flex gap="sm" wrap="wrap">
-                <Button>Book demo</Button>
-                <Button>Watch video</Button>
+                <Button
+                  size="md"
+                  variant="gradient"
+                  gradient={{
+                    from: "rgba(223, 97, 255, 1)",
+                    to: "violet",
+                    deg: 173,
+                  }}
+                >
+                  Book demo
+                </Button>
+                <Button size="md" className="secondary-btn">
+                  Watch video
+                </Button>
               </Flex>
             </Stack>
 
-            <Image radius="lg" w={800} src={HeroImage} alt="Hero Image" />
+            <Image radius="lg" w={1000} src={HeroImage} alt="Hero Image" />
           </Center>
         </Center>
       </AppShell.Main>

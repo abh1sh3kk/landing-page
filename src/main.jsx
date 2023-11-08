@@ -18,7 +18,7 @@ const themeObj = {
     fontWeight: "400",
 
     sizes: {
-      h1: { fontWeight: "800", fontSize: rem(42), lineHeight: "1.2" },
+      h1: { fontWeight: "800", fontSize: rem(42), lineHeight: "1.1" },
       h2: { fontSize: rem(30), lineHeight: "1.5" },
       h6: { fontWeight: "900" },
     },
