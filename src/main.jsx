@@ -10,6 +10,7 @@ const themeObj = {
     xs: rem(10),
     sm: rem(11),
     md: rem(14),
+    "md-2": rem(15),
     lg: rem(16),
     xl: rem(20),
   },
