@@ -51,7 +51,7 @@ function App() {
           justify="center"
           gap="xl"
           align="center"
-          w={"800px"}
+          w={{ sm: "clamp(0px, 60%, 800px)" }}
         >
           <Button
             component="p"
@@ -67,16 +67,22 @@ function App() {
           <Stack align="center" justify="center">
             <Title order={1} className="hero-text" align="center">
               Automate the distribution of your design tokens -
-              <span className="highlight-gradient">
+              <Text inherit className="highlight-gradient">
                 your team will love it.
-              </span>
+              </Text>
             </Title>
             <Text fz={18} align="center">
               Enhance your design system by creating your own source of truth,
               improve collaboration between design and development and reduce
               manual work.
             </Text>
-            <Flex gap="sm" wrap="wrap">
+            <Flex
+              className="btn-group"
+              gap={{ sm: "md", md: "sm" }}
+              direction={{ md: "row" }}
+              w="100%"
+              justify="center"
+            >
               <Button
                 size="md"
                 variant="gradient"
@@ -122,7 +128,7 @@ function App() {
               improve collaboration between design and development and reduce
               manual work.
             </Text>
-            <Flex gap="sm" wrap="wrap">
+            <Flex gap="sm">
               <Button
                 size="md"
                 variant="gradient"
@@ -141,14 +147,19 @@ function App() {
           </Stack>
         </Center>
 
-        <Center component={Flex} maw={1100} className="frame" gap="2rem">
-          <Stack className="frame__left" w={400} gap={0}>
-            <Stack>
-              <Flex gap={8} align="center">
+        <Flex
+          maw={1100}
+          className="frame"
+          gap={{ sm: "1rem", lg: "3rem" }}
+          direction={{ lg: "row" }}
+        >
+          <Stack className="frame__left" gap={0}>
+            <Stack gap={4}>
+              <Flex gap={8}>
                 <Icon123 />
                 <Title order={6}>Collect</Title>
               </Flex>
-              <Text w={400} size="lg">
+              <Text size="lg" align={{ md: "left" }}>
                 Easily connect all your favorite tools to Specify to create a
                 fully networked design system.
               </Text>
@@ -159,7 +170,7 @@ function App() {
                 <Icon123 />
                 <Title order={6}>Collect</Title>
               </Flex>
-              <Text w={400} size="lg">
+              <Text size="lg">
                 Easily connect all your favorite tools to Specify to create a
                 fully networked design system.
               </Text>
@@ -170,14 +181,14 @@ function App() {
                 <Icon123 />
                 <Title order={6}>Collect</Title>
               </Flex>
-              <Text w={400} size="lg">
+              <Text size="lg">
                 Easily connect all your favorite tools to Specify to create a
                 fully networked design system.
               </Text>
             </Stack>
           </Stack>
 
-          <Box className="frame__right video-container" >
+          <Box className="frame__right video-container">
             <video
               style={{ width: "100%" }}
               src="https://static.specifyapp.com/34458951720-720.mp4"
@@ -185,7 +196,7 @@ function App() {
               allow=" autoplay; encrypted-media;"
             />
           </Box>
-        </Center>
+        </Flex>
       </AppShell.Main>
     </AppShell>
   );
