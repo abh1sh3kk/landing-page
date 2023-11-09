@@ -52,6 +52,7 @@ function App() {
           gap="xl"
           align="center"
           w={{ sm: "clamp(0px, 60%, 800px)" }}
+          className="hero-section"
         >
           <Button
             component="p"
@@ -64,14 +65,14 @@ function App() {
             Introducing our Figma Variables compatibility
           </Button>
 
-          <Stack align="center" justify="center">
+          <Stack align="center" justify="center" className="hero-texts">
             <Title order={1} className="hero-text" align="center">
               Automate the distribution of your design tokens -
               <Text inherit className="highlight-gradient">
                 your team will love it.
               </Text>
             </Title>
-            <Text fz={18} align="center">
+            <Text fz={22} align="center" maw="70ch">
               Enhance your design system by creating your own source of truth,
               improve collaboration between design and development and reduce
               manual work.
