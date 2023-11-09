@@ -1,7 +1,6 @@
 import { useDisclosure } from "@mantine/hooks";
 import {
   AppShell,
-  Burger,
   Button,
   Flex,
   Text,
@@ -16,7 +15,9 @@ import HeroImage from "../src/assets/hero-img.webp";
 import classes from "./styles/MobileNavbar.module.css";
 import HeaderMenu from "./HeaderMenu";
 import { BsFillArrowRightCircleFill } from "react-icons/bs";
-import { Icon123 } from "@tabler/icons-react";
+import { BsCollectionPlayFill } from "react-icons/bs";
+import { RiStoreFill } from "react-icons/ri";
+import { BsStopCircleFill } from "react-icons/bs";
 
 function App() {
   const [opened, { toggle }] = useDisclosure();
@@ -52,7 +53,7 @@ function App() {
           gap="xl"
           align="center"
           w={{ sm: "clamp(0px, 60%, 800px)" }}
-          className="hero-section"
+          className="section hero-section"
         >
           <Button
             component="p"
@@ -72,11 +73,13 @@ function App() {
                 your team will love it.
               </Text>
             </Title>
+
             <Text fz={22} align="center" maw="70ch">
               Enhance your design system by creating your own source of truth,
               improve collaboration between design and development and reduce
               manual work.
             </Text>
+
             <Flex
               className="btn-group"
               gap={{ sm: "md", md: "sm" }}
@@ -113,23 +116,30 @@ function App() {
         </Center>
 
         <Center
-          className="hero--secondary"
           component={Stack}
           justify="center"
           gap="xl"
           align="center"
-          w={"800px"}
+          w={{ sm: "clamp(0px, 60%, 800px)" }}
+          className="hero-section"
         >
-          <Stack align="center" justify="center">
-            <Title order={2} className="hero-text-secondary" align="center">
+          <Stack align="center" justify="center" className="section hero-texts">
+            <Title order={1} className="hero-text" align="center">
               Improve your Continuous Design Data workflow
             </Title>
-            <Text fz={18} align="center">
-              Enhance your design system by creating your own source of truth,
-              improve collaboration between design and development and reduce
-              manual work.
+
+            <Text fz={22} align="center" maw="50ch">
+              Specify helps you gain control of your design system across teams
+              and products.
             </Text>
-            <Flex gap="sm">
+
+            <Flex
+              className="btn-group"
+              gap={{ sm: "md", md: "sm" }}
+              direction={{ md: "row" }}
+              w="100%"
+              justify="center"
+            >
               <Button
                 size="md"
                 variant="gradient"
@@ -142,7 +152,7 @@ function App() {
                 Book demo
               </Button>
               <Button size="md" className="secondary-btn">
-                Watch video
+                Read Vision
               </Button>
             </Flex>
           </Stack>
@@ -156,8 +166,8 @@ function App() {
         >
           <Stack className="frame__left" gap={0}>
             <Stack gap={4}>
-              <Flex gap={8}>
-                <Icon123 />
+              <Flex gap={8} align="center">
+                <BsCollectionPlayFill color="#5f3dc4" />
                 <Title order={6}>Collect</Title>
               </Flex>
               <Text size="lg" align={{ md: "left" }}>
@@ -168,23 +178,23 @@ function App() {
 
             <Stack>
               <Flex gap={8} align="center">
-                <Icon123 />
-                <Title order={6}>Collect</Title>
+                <RiStoreFill color="#5f3dc4" />
+                <Title order={6}>Store</Title>
               </Flex>
               <Text size="lg">
-                Easily connect all your favorite tools to Specify to create a
-                fully networked design system.
+                Create a single source of truth for your design tokens and
+                assets and start building brand consistency
               </Text>
             </Stack>
 
             <Stack>
               <Flex gap={8} align="center">
-                <Icon123 />
-                <Title order={6}>Collect</Title>
+                <BsStopCircleFill color="#5f3dc4" />
+                <Title order={6}>Distribute</Title>
               </Flex>
               <Text size="lg">
-                Easily connect all your favorite tools to Specify to create a
-                fully networked design system.
+                Quickly build a custom delivery pipeline that adapts to your
+                technology, framework, and platform — automatically.
               </Text>
             </Stack>
           </Stack>
