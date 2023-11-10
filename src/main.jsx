@@ -3,6 +3,7 @@ import ReactDOM from "react-dom/client";
 import App from "./App.jsx";
 import { MantineProvider, createTheme, rem } from "@mantine/core";
 import "@mantine/core/styles.css";
+import "@mantine/carousel/styles.css";
 import "./App.css";
 
 const themeObj = {

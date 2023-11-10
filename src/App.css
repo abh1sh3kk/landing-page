@@ -112,14 +112,13 @@ h1 {
   width: 700px;
   padding: 0;
   border: 1px solid #626262ed;
-  margin-block: 20rem;
+  /* margin-block: 20rem; */
 }
 
 .card-radial {
   width: 500px;
   position: relative;
   overflow: hidden;
-  /* border-right: 1px solid #373737f0; */
 }
 
 .circle-gradient {
@@ -133,4 +132,9 @@ h1 {
   width: 20em;
   height: 20em;
   filter: blur(40.2px);
+}
+
+.carousel-section {
+  user-select: none;
+  width: 100%;
 }
