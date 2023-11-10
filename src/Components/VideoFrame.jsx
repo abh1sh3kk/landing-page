@@ -6,7 +6,7 @@ const VideoFrame = () => {
   return (
     <Flex
       maw={1100}
-      className="frame"
+      className="section frame"
       gap={{ sm: "1rem", lg: "3rem" }}
       direction={{ lg: "row" }}
     >

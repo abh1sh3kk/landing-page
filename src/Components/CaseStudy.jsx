@@ -8,7 +8,7 @@ import {
 
 const CaseStudy = () => {
   return (
-    <section>
+    <section style={{ marginInline: "1rem" }}>
       <Card
         component={Flex}
         direction={{ sm: "column", lg: "row" }}
@@ -16,7 +16,7 @@ const CaseStudy = () => {
         className="case-study-card"
         maw={800}
         bg="transparent"
-        w="90vw"
+        w="85vw"
       >
         {/* ---------------------Left---------------------------- */}
         <Stack
