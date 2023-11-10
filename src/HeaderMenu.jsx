@@ -75,7 +75,7 @@ export default function HeaderMenu() {
   });
 
   return (
-    <header style={{position: "sticky", top: 0}} className={classes.header}>
+    <header style={{position: "sticky", top: 0, "zIndex": 3}} className={classes.header}>
       <Container size="md">
         <div className={classes.inner}>
           <MantineLogo size={28} />
