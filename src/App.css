@@ -20,8 +20,8 @@ h1 {
   margin-bottom: 10rem;
 }
 
-.hero-section, .hero-texts {
-  /* border: 1px solid red; */
+.hero-section,
+.hero-texts {
   gap: 2.5rem;
 }
 
@@ -54,7 +54,6 @@ h1 {
 .btn-group {
   flex-direction: column;
   padding-inline: 1rem;
-
 }
 
 .hero-text,
@@ -100,11 +99,38 @@ h1 {
 
 .video-container {
   border-radius: 0.5rem;
-  /* border: 2px solid red; */
   width: clamp(100px, 80vw, 750px);
 }
 
 .video-container > * {
   border-radius: inherit;
   /* height: 100%; */
+}
+
+.case-study-card {
+  display: flex;
+  width: 700px;
+  padding: 0;
+  border: 1px solid #626262ed;
+  margin-block: 20rem;
+}
+
+.card-radial {
+  width: 500px;
+  position: relative;
+  overflow: hidden;
+  /* border-right: 1px solid #373737f0; */
+}
+
+.circle-gradient {
+  position: absolute;
+  border-radius: 50%;
+
+  background-color: #7a25ff82;
+  top: -5rem;
+  left: -6rem;
+
+  width: 20em;
+  height: 20em;
+  filter: blur(40.2px);
 }
