@@ -14,6 +14,7 @@ import HeaderMenu from "./HeaderMenu";
 import HeroSection from "./Components/HeroSection";
 import VideoFrame from "./Components/VideoFrame";
 import CaseStudies from "./Components/CaseStudies";
+import DesignTokens from "./Components/DesignTokens";
 
 function App() {
   const [opened, { toggle }] = useDisclosure();
@@ -64,8 +65,8 @@ function App() {
 
             <Flex
               className="btn-group"
-              gap={{ sm: "md", md: "sm" }}
-              direction={{ md: "row" }}
+              gap={{ base: "md", md: "sm" }}
+              direction={{ xs: "column", md: "row" }}
               w="100%"
               justify="center"
             >
@@ -132,6 +133,7 @@ function App() {
             </Flex>
           </Stack>
         </Center>
+        <DesignTokens />
       </AppShell.Main>
     </AppShell>
   );
