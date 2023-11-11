@@ -1,8 +1,8 @@
-import { Menu, Group, Center, Burger, Container } from "@mantine/core";
+import { Menu, Group, Center, Burger, Container, Image } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
 import { IconChevronDown } from "@tabler/icons-react";
-import { MantineLogo } from "@mantine/ds";
 import classes from "./styles/HeaderMenu.module.css";
+import Logo from "./assets/logo.svg";
 
 const links = [
   { link: "/about", label: "Features" },
@@ -34,7 +34,9 @@ export default function HeaderMenu() {
 
   const items = links.map((link) => {
     const menuItems = link.links?.map((item) => (
-      <Menu.Item key={item.link}>{item.label}</Menu.Item>
+      <Menu.Item key={item.link} style={{ fontSize: "inherit" }}>
+        {item.label}
+      </Menu.Item>
     ));
 
     if (menuItems) {
@@ -44,6 +46,7 @@ export default function HeaderMenu() {
           trigger="hover"
           transitionProps={{ exitDuration: 0 }}
           withinPortal
+          style={{ fontSize: "inherit" }}
         >
           <Menu.Target>
             <a
@@ -57,7 +60,9 @@ export default function HeaderMenu() {
               </Center>
             </a>
           </Menu.Target>
-          <Menu.Dropdown>{menuItems}</Menu.Dropdown>
+          <Menu.Dropdown style={{ fontSize: "inherit" }}>
+            {menuItems}
+          </Menu.Dropdown>
         </Menu>
       );
     }
@@ -68,6 +73,7 @@ export default function HeaderMenu() {
         href={link.link}
         className={classes.link}
         onClick={(event) => event.preventDefault()}
+        style={{ fontSize: "inherit" }}
       >
         {link.label}
       </a>
@@ -75,10 +81,18 @@ export default function HeaderMenu() {
   });
 
   return (
-    <header style={{position: "sticky", top: 0, "zIndex": 3}} className={classes.header}>
+    <header
+      className={`${classes.header}`}
+      style={{
+        fontSize: "1rem",
+        position: "sticky",
+        top: 0,
+        zIndex: 3,
+      }}
+    >
       <Container size="md">
         <div className={classes.inner}>
-          <MantineLogo size={28} />
+          <img src={Logo} />
           <Group gap={5} visibleFrom="sm">
             {items}
           </Group>
