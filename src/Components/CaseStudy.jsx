@@ -8,10 +8,10 @@ import {
 
 const CaseStudy = () => {
   return (
-    <section style={{ marginInline: "1rem" }}>
+    <section style={{ marginInline: "1rem", marginBlock: "0.4rem" }}>
       <Card
         component={Flex}
-        direction={{ sm: "column", lg: "row" }}
+        direction={{ base: "column", md: "row" }}
         radius={12}
         className="case-study-card"
         maw={800}
