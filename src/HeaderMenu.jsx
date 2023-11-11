@@ -106,7 +106,12 @@ export default function HeaderMenu() {
           </Group>
 
           <Group>
-            <Button size="md" className="secondary-btn">
+            <Button
+              fz={14}
+              style={{ paddingInline: "0.8rem", height: "36px"}}
+              size="md"
+              className="secondary-btn"
+            >
               Sign In
             </Button>
             <Button
