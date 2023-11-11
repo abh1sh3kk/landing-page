@@ -9,15 +9,11 @@ import {
   Box,
 } from "@mantine/core";
 import HeroImage from "../assets/hero-img.webp";
-import { BsFillArrowRightCircleFill } from "react-icons/bs";
+import { BsPlayCircleFill } from "react-icons/bs";
+import { RiLink } from "react-icons/ri";
 
 const HeroSection = () => {
-  const rightIcon = (
-    <BsFillArrowRightCircleFill
-      style={{ marginLeft: "0.2rem" }}
-      fontSize={18}
-    />
-  );
+  const rightIcon = <RiLink style={{ marginLeft: "0.2rem" }} fontSize={18} />;
   return (
     <Center
       component={Stack}
@@ -27,14 +23,7 @@ const HeroSection = () => {
       w={{ sm: "clamp(0px, 60%, 800px)" }}
       className="section hero-section"
     >
-      <Button
-        component="p"
-        className="badge"
-        variant="white"
-        color="black"
-        rightSection={rightIcon}
-        fz={16}
-      >
+      <Button component="p" className="badge" rightSection={rightIcon} fz={18}>
         Introducing our Figma Variables compatibility
       </Button>
 
@@ -70,7 +59,11 @@ const HeroSection = () => {
           >
             Book demo
           </Button>
-          <Button size="md" className="secondary-btn">
+          <Button
+            size="md"
+            className="secondary-btn"
+            leftSection={<BsPlayCircleFill fontSize={18} />}
+          >
             Watch video
           </Button>
         </Flex>
