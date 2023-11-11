@@ -7,6 +7,7 @@ const CaseStudies = () => {
       slideSize={{ base: "90%", sm: "50%", md: "33.333333%" }}
       slideGap="lg"
       withControls={false}
+      withIndicators
       className="section carousel-section"
     >
       <CaseStudy />
