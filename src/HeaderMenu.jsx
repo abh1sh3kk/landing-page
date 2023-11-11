@@ -1,4 +1,12 @@
-import { Menu, Group, Center, Burger, Container, Image } from "@mantine/core";
+import {
+  Menu,
+  Group,
+  Center,
+  Burger,
+  Container,
+  Image,
+  Button,
+} from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
 import { IconChevronDown } from "@tabler/icons-react";
 import classes from "./styles/HeaderMenu.module.css";
@@ -90,12 +98,31 @@ export default function HeaderMenu() {
         zIndex: 3,
       }}
     >
-      <Container size="md">
+      <Container size="lg">
         <div className={classes.inner}>
-          <img src={Logo} />
+          <img src={Logo} height={24} />
           <Group gap={5} visibleFrom="sm">
             {items}
           </Group>
+
+          <Group>
+            <Button size="md" className="secondary-btn">
+              Sign In
+            </Button>
+            <Button
+              variant="gradient"
+              gradient={{
+                from: "rgba(223, 97, 255, 1)",
+                to: "violet",
+                deg: 173,
+              }}
+              fz={14}
+              style={{ paddingInline: "0.8rem" }}
+            >
+              Book demo
+            </Button>
+          </Group>
+
           <Burger opened={opened} onClick={toggle} size="sm" hiddenFrom="sm" />
         </div>
       </Container>

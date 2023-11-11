@@ -48,7 +48,11 @@ function App() {
           w={{ sm: "clamp(0px, 60%, 800px)" }}
           className="hero-section"
         >
-          <Stack align="center" justify="center" className="section hero-texts">
+          <Stack
+            align="center"
+            justify="center"
+            className="second-hero hero-texts"
+          >
             <Title order={1} className="hero-text" align="center">
               Improve your Continuous Design Data workflow
             </Title>
