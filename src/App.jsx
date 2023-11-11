@@ -15,6 +15,7 @@ import HeroSection from "./Components/HeroSection";
 import VideoFrame from "./Components/VideoFrame";
 import CaseStudies from "./Components/CaseStudies";
 import DesignTokens from "./Components/DesignTokens";
+import Actions from "./Components/Actions";
 
 function App() {
   const [opened, { toggle }] = useDisclosure();
@@ -133,6 +134,9 @@ function App() {
             </Flex>
           </Stack>
         </Center>
+
+        <Actions />
+
         <DesignTokens />
       </AppShell.Main>
     </AppShell>
