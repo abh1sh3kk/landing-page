@@ -26,6 +26,7 @@ function App() {
       navbar={{
         width: 300,
         breakpoint: "sm",
+
         collapsed: { desktop: true, mobile: !opened },
       }}
       padding="md"
@@ -39,7 +40,7 @@ function App() {
         <UnstyledButton className={classes.control}>Support</UnstyledButton>
       </AppShell.Navbar>
 
-      <AppShell.Main className="main">
+      <AppShell.Main p={{ base: "xl", sm: "5rem" }} className="main">
         <HeroSection />
 
         <Center

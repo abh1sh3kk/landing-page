@@ -52,7 +52,7 @@ h1 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* background-color: red; */
+    /* background-color: red; */
 }
 
 .secondary-btn {
@@ -74,7 +74,7 @@ h1 {
 }
 
 .hero-text {
-  font-size: clamp(3rem, 4vw, 4rem) !important;
+  font-size: clamp(2.5rem, 4vw, 4rem) !important;
 }
 
 .highlight-gradient {

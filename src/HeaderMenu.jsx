@@ -105,7 +105,7 @@ export default function HeaderMenu() {
             {items}
           </Group>
 
-          <Group>
+          <Group visibleFrom="sm">
             <Button
               fz={14}
               style={{ paddingInline: "0.8rem", height: "36px"}}

@@ -18,17 +18,27 @@ const HeroSection = () => {
     <Center
       component={Stack}
       justify="center"
-      gap="xl"
+      gap={{ base: "sm", sm: "xl" }}
       align="center"
-      w={{ sm: "clamp(0px, 60%, 800px)" }}
+      w={{ base: "clamp(0px, 60%, 800px)" }}
       className="section hero-section"
     >
-      <Button component="p" className="badge" rightSection={rightIcon} fz={18}>
+      <Button
+        component="p"
+        className="badge"
+        rightSection={rightIcon}
+        fz="clamp(8px, 4vw, 18px)"
+      >
         Introducing our Figma Variables compatibility
       </Button>
 
-      <Stack align="center" justify="center" className="hero-texts">
-        <Title order={1} className="hero-text" align="center">
+      <Stack
+        align="center"
+        gap={{ base: "sm", sm: "xl" }}
+        justify="center"
+        className="hero-texts"
+      >
+        <Title className="hero-text" align="center">
           Automate the distribution of your design tokens -
           <Text inherit className="highlight-gradient">
             your team will love it.
@@ -72,7 +82,7 @@ const HeroSection = () => {
       <Box style={{ flex: 1 }} className="hero__bg-gradient">
         <Image
           radius="lg"
-          w="clamp(320px, 80vw, 1000px)"
+          w="clamp(0px, 80vw, 1000px)"
           src={HeroImage}
           alt="Hero Image"
           className="hero-img"
