@@ -16,6 +16,7 @@ import VideoFrame from "./Components/VideoFrame";
 import CaseStudies from "./Components/CaseStudies";
 import DesignTokens from "./Components/DesignTokens";
 import Actions from "./Components/Actions";
+import Footer from "./Components/Footer";
 
 function App() {
   const [opened, { toggle }] = useDisclosure();
@@ -139,6 +140,8 @@ function App() {
         <Actions />
 
         <DesignTokens />
+
+        <Footer />
       </AppShell.Main>
     </AppShell>
   );
