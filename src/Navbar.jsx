@@ -71,7 +71,12 @@ export default function Navbar() {
   const theme = useMantineTheme();
 
   const links = mockdata.map((item) => (
-    <UnstyledButton className={` ${classes.subLink}`} ml={18} my={8} key={item.title}>
+    <UnstyledButton
+      className={` ${classes.subLink}`}
+      ml={18}
+      my={8}
+      key={item.title}
+    >
       <Group wrap="nowrap" align="flex-start">
         <ThemeIcon size={34} variant="default" radius="md">
           <item.icon
@@ -93,17 +98,9 @@ export default function Navbar() {
 
   return (
     <Box>
-      <header
-        className={`${classes.header} `}
-        // style={{
-        //   fontSize: "1rem",
-        //   position: "sticky",
-        //   top: 0,
-        //   zIndex: 4,
-        // }}
-      >
+      <header className={`${classes.header} `}>
         <Container size="lg" pt={12}>
-          <Group justify="space-between" className="border" h="100%">
+          <Group justify="space-between" h="100%">
             <img src={Logo} height={24} />
 
             <Group h="100%" gap={0} visibleFrom="sm">
@@ -111,7 +108,7 @@ export default function Navbar() {
                 Home
               </a>
               <HoverCard
-                width={600}
+                width={800}
                 position="bottom"
                 radius="md"
                 shadow="md"
@@ -134,7 +131,7 @@ export default function Navbar() {
                 <HoverCard.Dropdown style={{ overflow: "hidden" }}>
                   <Group justify="space-between" px="md">
                     <Text fw={500}>Features</Text>
-                    <Anchor href="#" fz="xs">
+                    <Anchor href="#" fz="md">
                       View all
                     </Anchor>
                   </Group>
@@ -148,21 +145,25 @@ export default function Navbar() {
                   <div className={classes.dropdownFooter}>
                     <Group justify="space-between">
                       <div>
-                        <Text fw={500} fz="sm">
+                        <Text fw={500} fz="md">
                           Get started
                         </Text>
-                        <Text size="xs" c="dimmed">
+                        <Text size="md" c="dimmed">
                           Their food sources have decreased, and their numbers
                         </Text>
                       </div>
-                      <Button variant="default">Get started</Button>
+                      <Button variant="default" size="md">
+                        Get started
+                      </Button>
                     </Group>
                   </div>
                 </HoverCard.Dropdown>
               </HoverCard>
+
               <a href="#" className={`inherit-font ${classes.link}`}>
                 Learn
               </a>
+
               <a href="#" className={`inherit-font ${classes.link}`}>
                 Academy
               </a>
