@@ -17,29 +17,9 @@ import Footer from "./Components/Footer";
 import Navbar from "./Navbar";
 
 function App() {
-  const [opened, { toggle }] = useDisclosure();
-
   return (
-    <AppShell
-      header={{ height: 60 }}
-      navbar={{
-        width: 300,
-        breakpoint: "sm",
-
-        collapsed: { desktop: true, mobile: !opened },
-      }}
-      padding="md"
-    >
+    <AppShell header={{ height: 60 }} padding="md">
       <Navbar />
-
-      {/* <HeaderMenu /> */}
-
-      {/* <AppShell.Navbar py="md" px={4}>
-        <UnstyledButton className={classes.control}>Home</UnstyledButton>
-        <UnstyledButton className={classes.control}>Blog</UnstyledButton>
-        <UnstyledButton className={classes.control}>Contacts</UnstyledButton>
-        <UnstyledButton className={classes.control}>Support</UnstyledButton>
-      </AppShell.Navbar> */}
 
       <AppShell.Main p={{ base: "xl", sm: "5rem" }} className="main">
         <HeroSection />

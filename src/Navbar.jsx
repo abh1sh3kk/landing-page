@@ -97,7 +97,12 @@ export default function Navbar() {
   ));
 
   return (
-    <Box>
+    <Box style={{
+      position: "sticky", 
+      top: 0,
+      zIndex: 5,
+      backgroundColor: "#151718",
+    }}>
       <header className={`${classes.header} `}>
         <Container size="lg" pt={12}>
           <Group justify="space-between" h="100%">
