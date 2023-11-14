@@ -4,19 +4,17 @@ import {
   Button,
   Flex,
   Text,
-  UnstyledButton,
   Title,
   Stack,
   Center,
 } from "@mantine/core";
-import classes from "./styles/MobileNavbar.module.css";
-import HeaderMenu from "./HeaderMenu";
 import HeroSection from "./Components/HeroSection";
 import VideoFrame from "./Components/VideoFrame";
 import CaseStudies from "./Components/CaseStudies";
 import DesignTokens from "./Components/DesignTokens";
 import Actions from "./Components/Actions";
 import Footer from "./Components/Footer";
+import Navbar from "./Navbar";
 
 function App() {
   const [opened, { toggle }] = useDisclosure();
@@ -32,14 +30,16 @@ function App() {
       }}
       padding="md"
     >
-      <HeaderMenu />
+      <Navbar />
 
-      <AppShell.Navbar py="md" px={4}>
+      {/* <HeaderMenu /> */}
+
+      {/* <AppShell.Navbar py="md" px={4}>
         <UnstyledButton className={classes.control}>Home</UnstyledButton>
         <UnstyledButton className={classes.control}>Blog</UnstyledButton>
         <UnstyledButton className={classes.control}>Contacts</UnstyledButton>
         <UnstyledButton className={classes.control}>Support</UnstyledButton>
-      </AppShell.Navbar>
+      </AppShell.Navbar> */}
 
       <AppShell.Main p={{ base: "xl", sm: "5rem" }} className="main">
         <HeroSection />

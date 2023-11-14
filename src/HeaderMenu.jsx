@@ -4,7 +4,6 @@ import {
   Center,
   Burger,
   Container,
-  Image,
   Button,
 } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
