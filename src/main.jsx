@@ -1,9 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import App from "./App.jsx";
+// import App from "./App.jsx";
 import { MantineProvider, createTheme, rem } from "@mantine/core";
 import "@mantine/core/styles.css";
 import "@mantine/carousel/styles.css";
+import AboutUs from "./Components/AboutUs.jsx";
 import "./App.css";
 
 const themeObj = {
@@ -31,7 +32,8 @@ const theme = createTheme(themeObj);
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <MantineProvider defaultColorScheme="dark" theme={theme}>
-      <App />
+      <AboutUs />
+      {/* <App /> */}
     </MantineProvider>
   </React.StrictMode>
 );
