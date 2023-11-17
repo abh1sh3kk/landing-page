@@ -158,6 +158,10 @@ h1 {
   flex-direction: column;
 }
 
+.logo-img{
+  padding: 1rem;
+}
+
 
 
 .border {

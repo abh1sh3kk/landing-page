@@ -1,17 +1,37 @@
-import { AppShell, Button, Flex, Group, Image, Stack, Text, Title } from "@mantine/core";
+import {
+  AppShell,
+  Button,
+  Center,
+  Flex,
+  Group,
+  Image,
+  Stack,
+  Text,
+  Title,
+} from "@mantine/core";
 import Footer from "./Footer";
 import Navbar from "../Navbar";
 import LogoPNG from "../assets/logo2.png";
+import Pitch from "../assets/l-pitch.svg";
+import Census from "../assets/l-census.svg";
+import ComCast from "../assets/l-comcast.svg";
+import Pocket from "../assets/l-pocket.svg";
+import Dashlane from "../assets/l-dashlane.svg";
+import Ruter from "../assets/l-ruter.svg";
+import StarAtlas from "../assets/l-staratlas.svg";
+import EpicGames from "../assets/l-epicgames.svg";
 
 function AboutUs() {
   return (
     <AppShell header={{ height: 60 }} padding="md">
       <Navbar />
 
-      <AppShell.Main py={{ base: "xl", sm: "5rem" }} className="main">
-        <Stack gap="lg" my="4rem" align="center">
-          <Image src={LogoPNG} maw="6rem"  />
-          <Title order={2}>Join Our Global Team</Title>
+      <AppShell.Main className="main">
+        <Stack c="white" gap="lg" my="4rem" align="center">
+          <Image src={LogoPNG} maw="6rem" />
+          <Title order={2} w="100%" style={{ textAlign: "center" }}>
+            Join Our Global Team
+          </Title>
           <Text maw="450px" style={{ textAlign: "center" }}>
             We're on a mission to help organizations efficiently manage their
             brand identity at scale.
@@ -25,17 +45,17 @@ function AboutUs() {
               deg: 173,
             }}
           >
-          View Jobs
+            View Jobs
           </Button>
         </Stack>
 
-        <Group className="" mt="2rem" mb="5rem" maw="1100px">
+        <Group className="" mt="2rem" my="5rem" maw="1100px">
           <Title
             order={2}
+            c="white"
             w="100%"
             p="md"
             style={{ textAlign: "center" }}
-            // className="border"
           >
             About Us
           </Title>
@@ -44,7 +64,7 @@ function AboutUs() {
             lh="1.8"
             c="white"
             gap="md"
-            // style={{boxShadow: "1px 1px 1px red"}}
+            p="md"
           >
             <Text size="lg" lh="inherit">
               We're a passionate remote team building the future of Design
@@ -66,14 +86,13 @@ function AboutUs() {
 
         <Flex
           mb="5rem"
-          style={{ borderRadius: "10px" }}
           gap={{ base: "1rem", sm: "2rem", md: "3rem" }}
-          bg=" rgb(31, 35, 36)"
           w="100%"
           justify="center"
-          py="lg"
+          py="xl"
           wrap="wrap"
-          maw={1100}
+          bg="rgba(36, 36, 36, 0.27)"
+          // maw={1100}
           c="white"
         >
           <Stack align="center" className="" p="md">
@@ -89,6 +108,70 @@ function AboutUs() {
             <Text size="lg">Team Members</Text>
           </Stack>
         </Flex>
+
+        <Center
+          component={Stack}
+          justify="center"
+          gap="xl"
+          align="center"
+          w={{ sm: "clamp(0px, 60%, 800px)" }}
+          className="hero-section"
+        >
+          <Stack
+            align="center"
+            justify="center"
+            gap="lg"
+            my="5rem"
+            // className="second-hero hero-texts"
+          >
+            <Title order={1} c="white" align="center">
+              Start automating your design system today.
+            </Title>
+
+            <Flex
+              className="btn-group"
+              gap={{ base: "xl", md: "xl" }}
+              direction={{ xs: "column", md: "row" }}
+              w="100%"
+              justify="center"
+            >
+              <Button
+                size="md"
+                variant="gradient"
+                gradient={{
+                  from: "rgba(223, 97, 255, 1)",
+                  to: "violet",
+                  deg: 173,
+                }}
+              >
+                Book demo
+              </Button>
+            </Flex>
+          </Stack>
+        </Center>
+
+        <Stack
+          style={{ borderRadius: "10px" }}
+          w="100%"
+          py="xl"
+          align="center"
+          my="4rem"
+          bg="#20232445"
+        >
+          <Text size="lg" w="100%" style={{ textAlign: "center" }}>
+            Already loved and trusted by product teams
+          </Text>
+          <Flex gap="lg" p="md" wrap="wrap" justify="center" maw={900}>
+            <img className="logo-img" alt="logo" src={Pitch} />
+            <img className="logo-img" alt="logo" src={Census} />
+            <img className="logo-img" alt="logo" src={EpicGames} />
+            <img className="logo-img" alt="logo" src={ComCast} />
+            <img className="logo-img" alt="logo" src={Pocket} />
+            <img className="logo-img" alt="logo" src={Dashlane} />
+            <img className="logo-img" alt="logo" src={Ruter} />
+            <img className="logo-img" alt="logo" src={StarAtlas} />
+          </Flex>
+        </Stack>
 
         <Footer />
       </AppShell.Main>

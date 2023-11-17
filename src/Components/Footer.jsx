@@ -3,7 +3,13 @@ import Logo from "../assets/logo.svg";
 
 const Footer = () => {
   return (
-    <Stack gap="md" w="100%" align="center" className="footer">
+    <Stack
+      p={{ base: "md", md: "unset" }}
+      gap="md"
+      w="100%"
+      align="center"
+      className="footer"
+    >
       <Flex
         style={{ borderBlock: " 1px solid #6f6f6f66" }}
         py="lg"
@@ -12,7 +18,6 @@ const Footer = () => {
         justify="space-around"
         w={{ base: "100%" }}
         maw="1120px"
-        //   style={{ border: "1px solid pink" }}
       >
         {/* Image */}
         <Stack w={{ base: "100%", md: "unset" }} pr="xl" align="center">
